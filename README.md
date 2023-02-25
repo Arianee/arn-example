@@ -4,9 +4,9 @@ Sample application using ARN.
 Check the branch that suits your needs:
 - [**Angular**](https://github.com/Arianee/arn-example/tree/angular)
 - **React**
-  - [Built using Vite](https://github.com/Arianee/arn-example/tree/react)
+  - [Built using Vite](https://github.com/Arianee/arn-example/tree/react_vite)
 - **Svelte**
-  - [Built using Vite](https://github.com/Arianee/arn-example/tree/svelte)
+  - [Built using Vite](https://github.com/Arianee/arn-example/tree/svelte_vite)
 - **vanilla**
   - JavaScript
     - [Built using Vite](https://github.com/Arianee/arn-example/tree/ts_vite)
