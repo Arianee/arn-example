@@ -1,15 +1,20 @@
-// See https://github.com/WalletConnect/walletconnect-monorepo/issues/734
-
-import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 import {defineConfig} from "vite"
+import {NodeGlobalsPolyfillPlugin} from "@esbuild-plugins/node-globals-polyfill"
+import vue from "@vitejs/plugin-vue"
 
 export default defineConfig({
-  // ...other config settings
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (name) => name.startsWith("arn-")
+      }
+    }
+  })],
   optimizeDeps: {
     esbuildOptions: {
       // Node.js global to browser globalThis
       define: {
-        global: 'globalThis'
+        global: "globalThis"
       },
       // Enable esbuild polyfill plugins
       plugins: [

@@ -11,9 +11,11 @@
   "dependencies": {
     "@arianeeprivate/arn-client": "~1.30.0",
     "@arianeeprivate/arn-components": "~1.14.0",
-    "@arianeeprivate/arn-types": "~1.19.0"
+    "@arianeeprivate/arn-types": "~1.19.0",
+    "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
     "vite": "^4.1.0",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3"
   }
