@@ -8,6 +8,7 @@ While integrating ARN into a web app can be summarized as:
     const clientFactory = new ArnServerClientFactory();
     const config = await clientFactory.createConfigFromUrl('https://my-arn-server/myProject')
     const arnClient = clientFactory.create(config);
+   
     window.arnClient = arnClient
     ```
 
