@@ -1,0 +1,22 @@
+{
+  "name": "arn-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@arianeeprivate/arn-client": "~1.30.0",
+    "@arianeeprivate/arn-components": "~1.14.0",
+    "@arianeeprivate/arn-types": "~1.19.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "svelte": "^3.55.1",
+    "vite": "^4.1.0",
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3"
+  }
+}
