@@ -1,6 +1,18 @@
 # arn-example
 Sample application using ARN.
 
+While integrating ARN into a web app can be summarized as:
+1. installing the ARN packages 
+2. adding the following lines of code at app startup:
+    ```js
+    const clientFactory = new ArnServerClientFactory();
+    const config = await clientFactory.createConfigFromUrl('https://my-arn-server/myProject')
+    const arnClient = clientFactory.create(config);
+    window.arnClient = arnClient
+    ```
+
+it can be still worth having bootstrap/example projects to demystify it.
+
 Check the branch that suits your needs:
 - [**Angular**](https://github.com/Arianee/arn-example/tree/angular)
 - **React**
