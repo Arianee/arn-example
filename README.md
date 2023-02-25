@@ -5,6 +5,8 @@ Check the branch that suits your needs:
 - [**Angular**](https://github.com/Arianee/arn-example/tree/angular)
 - **React**
   - [Built using Vite](https://github.com/Arianee/arn-example/tree/react_vite)
+  - **Preact**
+    - [Built using Vite](https://github.com/Arianee/arn-example/tree/preact_vite)
 - **Svelte**
   - [Built using Vite](https://github.com/Arianee/arn-example/tree/svelte_vite)
 - **vanilla**
