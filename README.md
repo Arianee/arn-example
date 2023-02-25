@@ -6,8 +6,8 @@ Check the branch that suits your needs:
 - **React**
   - [Built using Vite](https://github.com/Arianee/arn-example/tree/react)
 - **Svelte**
-  - [Built using Vite)](https://github.com/Arianee/arn-example/tree/svelte)
+  - [Built using Vite](https://github.com/Arianee/arn-example/tree/svelte)
 - **vanilla JS**
   - [Built using Vite](https://github.com/Arianee/arn-example/tree/js_vite)
 - **VueJS**
-  - [Built by Vite](https://github.com/Arianee/arn-example/tree/vue_vite)
+  - [Built using Vite](https://github.com/Arianee/arn-example/tree/vue_vite)
