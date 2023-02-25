@@ -1,0 +1,18 @@
+<h1>ARN Example</h1>
+<p>This is an Angular version of the ARN example.</p>
+<section>
+  <h2>Wallet connection</h2>
+  <p>This is a sample usage of the <code>&lt;arn-connect&gt;</code> ARN component:</p>
+  <arn-connect>
+    <button slot="if-false">Connect your wallet</button>
+    <button slot="if-true">Disconnect your wallet</button>
+  </arn-connect>
+</section>
+<section>
+  <h2>Connection gating</h2>
+  <p>This is a sample usage of the <code>&lt;arn-if-connected&gt;</code> ARN component:</p>
+  <arn-if-connected>
+    <p slot="if-false">You are not connected.</p>
+    <p slot="if-true">Your are connected!</p>
+  </arn-if-connected>
+</section>
