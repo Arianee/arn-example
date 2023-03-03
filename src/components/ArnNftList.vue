@@ -26,9 +26,12 @@ arnClient.auth.currentContext$.subscribe(async (authContext) => {
   <p>This is a sample usage of the <code>arnClient.nft.getList(tag)</code> API:</p>
   <arn-if-connected>
     <div slot="if-true">
-      <ul>
-        <li v-for="nft in foundNFTs?.length" :key="nft.id">{{ nft.id }}</li>
+      <ul v-if="foundNFTs && foundNFTs.length > 0">
+        <li v-for="nft in foundNFTs?.length" :key="nft.tokenId">{{ nft.tokenId }}</li>
       </ul>
+      <p v-else>
+        You own no Arianee NFT with tag <code>{{this.tag}}</code>.
+      </p>
     </div>
     <div slot="if-false">
       (you can list NFTs only when connected)
