@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arianeeprivate/arn-client": "~1.35.2",
-    "@arianeeprivate/arn-components": "~1.18.0",
-    "@arianeeprivate/arn-types": "~1.20.0",
+    "@arianeeprivate/arn-client": "~1.40.2",
+    "@arianeeprivate/arn-components": "~1.21.0",
+    "@arianeeprivate/arn-types": "~1.21.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
