@@ -10,11 +10,9 @@ arnClient.auth.currentContext$.subscribe(async (authContext) => {
     switch (status?.connectionStatus) {
       case 'authenticated':
         walletAddress.value = status.address
-        console.log("You are connected", walletAddress.value)
         break
       case 'disconnected':
         walletAddress.value = ""
-        console.log("You are disconnected", walletAddress.value)
         break
     }
   })
