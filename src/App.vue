@@ -5,8 +5,8 @@ import ArnNftList from "./components/ArnNftList.vue"
 </script>
 
 <template>
-  <ArnConnectExample connectMsg="Connect your wallet" disconnectMsg="Disconnect your wallet" />
-  <ArnIfConnectedExample disconnectedMsg="You are not connected." connectedMsg="You are connected!" />
-  <ArnNftList tag="tag-1" />
+  <ArnConnectExample connectMsg="Connect your wallet" disconnectMsg="Disconnect your wallet"/>
+  <ArnIfConnectedExample disconnectedMsg="You are not connected" connectedMsg="You are connected with wallet address"/>
+  <ArnNftList tag="myTag"/>
 </template>
 

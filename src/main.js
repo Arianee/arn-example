@@ -8,5 +8,7 @@ const clientFactory = new ArnServerClientFactory()
 const projectUrl = "https://arn-server-iwc-dev-quvnqrx5rq-ew.a.run.app/iwc"
 clientFactory.createFromUrl(projectUrl).then(arnClient => {
   window.arnClient = arnClient
-  createApp(App).mount("#app")
+  const app = createApp(App)
+  app.config.globalProperties.arnClient = arnClient
+  app.mount("#app")
 })

@@ -1,8 +1,10 @@
 <script setup>
+
 defineProps({
   connectMsg: String,
   disconnectMsg: String
 })
+
 </script>
 
 <template>
