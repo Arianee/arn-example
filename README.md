@@ -5,9 +5,9 @@ Sample application using [ARN](https://arianee.notion.site/ARN-User-Guide-c2aeab
 While integrating ARN into a web app can be summarized as:
 
 1. [installing the ARN client packages](https://www.notion.so/arianee/ARN-Client-User-Guide-64f75a6e2df34094a0451e7b0ae80566?pvs=4#96094d70352149e9865080e737845de9):
-   2. `@arianee/arn-client`
-   3. `@arianee/arn-types`
-   3. `@arianee/arn-components` if you want to use ARN web components as well.
+   1. `@arianee/arn-client`
+   1. `@arianee/arn-types`
+   1. `@arianee/arn-components` if you want to use ARN web components as well.
 2. Ask for a project setup on an ARN Server (or create one on the test server).
 2. adding the following lines of code at app startup:
     ```js
