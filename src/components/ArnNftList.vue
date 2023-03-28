@@ -1,6 +1,6 @@
 <script setup>
 
-import {ArnConnectionStatus} from "@arianeeprivate/arn-client"
+import {ArnConnectionStatus} from "@arianee/arn-client"
 
 const props = defineProps({
   tag: String
