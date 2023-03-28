@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arianeeprivate/arn-client": "~1.30.0",
-    "@arianeeprivate/arn-components": "~1.14.0",
-    "@arianeeprivate/arn-types": "~1.19.0"
+    "@arianeeprivate/arn-client": "1.47.2",
+    "@arianeeprivate/arn-components": "1.22.0",
+    "@arianeeprivate/arn-types": "1.27.0"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
