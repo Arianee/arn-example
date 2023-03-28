@@ -21,9 +21,9 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0",
-    "@arianeeprivate/arn-client": "1.47.2",
-    "@arianeeprivate/arn-components": "1.22.0",
-    "@arianeeprivate/arn-types": "1.27.0"
+    "@arianee/arn-client": "1.0.4",
+    "@arianee/arn-components": "1.0.0",
+    "@arianee/arn-types": "1.0.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.0",
