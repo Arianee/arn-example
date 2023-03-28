@@ -8,10 +8,12 @@ While integrating ARN into a web app can be summarized as:
    2. `@arianee/arn-client`
    3. `@arianee/arn-types`
    3. `@arianee/arn-components` if you want to use ARN web components as well.
+2. Ask for a project setup on an ARN Server (or create one on the test server).
 2. adding the following lines of code at app startup:
     ```js
+    const myProjectUrl = 'https://my-arn-server/myProject'
     const clientFactory = new ArnHttpClientFactory()
-    const arnClient = await clientFactory.createFromUrl('https://my-arn-server/myProject');
+    const arnClient = await clientFactory.createFromUrl(myProjectUrl);
    
     window.arnClient = arnClient  // or whatever scope you want to make it available from 
     ```
