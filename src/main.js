@@ -1,5 +1,5 @@
-import {ArnHttpClientFactory} from "@arianeeprivate/arn-client"
-import "@arianeeprivate/arn-components"
+import {ArnHttpClientFactory} from "@arianee/arn-client"
+import "@arianee/arn-components"
 import {ConnectExample} from "./ConnectExample"
 import {IfConnectedExample} from "./IfConnectedExample.js"
 import {NftListExample} from "./NftListExample.js"
