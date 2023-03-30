@@ -1,14 +1,11 @@
 <script setup>
-
 import {ArnConnectionStatus} from "@arianee/arn-client"
-
+import { inject } from 'vue'
+const arnClient = inject('arnClient')
 const props = defineProps({
   tag: String
 })
-const arnClient = window.arnClient;
-
 let foundNFTs;
-
 const findNFTs = async() => {
   foundNFTs = await arnClient.nft.arianee.getList({tags: [props.tag]})
 }

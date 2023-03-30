@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from "vue";
+import { ref, inject } from "vue";
+const arnClient = inject('arnClient')
 defineProps({
   connectedMsg: String,
   disconnectedMsg: String
