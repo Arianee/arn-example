@@ -7,12 +7,14 @@ export class NftListExample {
     // Listen to connection status changes
     arnClient.auth.currentContext$.subscribe(async (authContext) => {
       authContext?.status$.subscribe(async (status) => {
-        if (status?.connectionStatus === 'authenticated') {
+        if (status?.connectionStatus === "authenticated") {
           this.foundNFTs = await arnClient.nft.arianee.getList({tags: [tag]})
-          this.render(this.latestAnchor)
+          if (this.latestAnchor) {
+            this.render(this.latestAnchor)
+          }
         }
-      });
-    });
+      })
+    })
   }
 
   render(anchor) {
