@@ -5,7 +5,6 @@ import {ArnHttpClientFactory} from "@arianee/arn-client"
 import "@arianee/arn-components"
 
 const clientFactory = new ArnHttpClientFactory()
-clientFactory.createFromUrl("https://arn-server-test-dev.arianee.com/testproject").then(arnClient => {
-  window.arnClient = arnClient
+clientFactory.createFromUrl("https://arn-server-test-dev.arianee.com/testproject").then(() => {
   render(<App/>, document.getElementById("app"))
 })

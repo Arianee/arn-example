@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "preact": "^10.11.3",
-    "@arianee/arn-client": "1.0.4",
+    "@arianee/arn-client": "1.1.0",
     "@arianee/arn-components": "1.0.0",
-    "@arianee/arn-types": "1.0.4",
+    "@arianee/arn-types": "1.2.0",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3"
   },
   "devDependencies": {
