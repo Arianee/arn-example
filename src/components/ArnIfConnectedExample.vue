@@ -1,18 +1,20 @@
 <script setup>
 import { ref, inject } from "vue";
-const arnClient = inject('arnClient')
+import {ArnConnectionStatus} from "@arianee/arn-client"
+const arn = inject('arn')
 defineProps({
   connectedMsg: String,
   disconnectedMsg: String
 })
 let walletAddress = ref("")
-arnClient.auth.currentContext$.subscribe(async (authContext) => {
+// Listen to auth status to refresh wallet address
+arn.auth.currentContext$.subscribe(async (authContext) => {
   authContext?.status$.subscribe((status) => {
     switch (status?.connectionStatus) {
-      case 'authenticated':
+      case ArnConnectionStatus.authenticated:
         walletAddress.value = status.address
         break
-      case 'disconnected':
+      case ArnConnectionStatus.disconnected:
         walletAddress.value = ""
         break
     }
