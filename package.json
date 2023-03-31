@@ -26,8 +26,8 @@
     "@arianee/arn-types": "1.2.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.0",
-    "@angular/cli": "~15.2.0",
+    "@angular-devkit/build-angular": "^15.2.4",
+    "@angular/cli": "~15.2.4",
     "@angular/compiler-cli": "^15.2.0",
     "@angular-builders/custom-webpack": "^15.0.0",
     "@types/jasmine": "~4.3.0",
