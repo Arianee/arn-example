@@ -6,9 +6,7 @@ import {NftListExample} from "./NftListExample.js"
 
 const clientFactory = new ArnHttpClientFactory()
 clientFactory.createFromUrl("https://arn-server-test-dev.arianee.com/testproject")
-  .then(arnClient => {
-    window.arnClient = arnClient
-
+  .then(() => {
     const connectExample = new ConnectExample("Connect your wallet", "Disconnect your wallet")
     connectExample.render(document.querySelector("#arn-connect"))
 
@@ -16,5 +14,5 @@ clientFactory.createFromUrl("https://arn-server-test-dev.arianee.com/testproject
     ifConnectedExample.render(document.querySelector("#arn-if-connected"))
 
     const nftListExample = new NftListExample("myTag")
-      nftListExample.render(document.querySelector("#arn-nft-list"))
+    nftListExample.render(document.querySelector("#arn-nft-list"))
   })

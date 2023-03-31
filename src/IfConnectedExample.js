@@ -5,6 +5,7 @@ export class IfConnectedExample {
     this.msgDisconnected = msgDisconnected
 
     this.walletAddress = ''
+    // Listen to auth status to refresh wallet address
     arnClient.auth.currentContext$.subscribe(async (authContext) => {
       authContext?.status$.subscribe((status) => {
         switch (status?.connectionStatus) {
