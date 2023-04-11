@@ -1,0 +1,15 @@
+<section>
+  <h2>NFT list by tag</h2>
+  <p>This is a sample usage of the <code>arnClient.nft.arianee.getList(tag)</code> API:</p>
+  <arn-if-connected>
+    <div slot="if-true">
+      <ul *ngIf="foundNFTs.length > 0">
+        <li *ngFor="let nft of foundNFTs">{{ nft.tokenId }}</li>
+      </ul>
+      <p *ngIf="foundNFTs.length <= 0">You own no Arianee NFT with tag <code>{{ tag }}</code>.</p>
+    </div>
+    <div slot="if-false">
+      <p>Please connect first.</p>
+    </div>
+  </arn-if-connected>
+</section>
