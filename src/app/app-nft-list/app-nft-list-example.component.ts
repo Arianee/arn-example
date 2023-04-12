@@ -1,6 +1,6 @@
 import {Component, Input, NgZone} from "@angular/core"
 import {ArnClient, ArnConnectionStatus} from "@arianee/arn-client"
-import {NmpGetCertificatesResponse} from "@arianee/arn-types"
+import {NmpCertificatesResponse} from "@arianee/arn-types"
 
 declare const arnClient: ArnClient
 
@@ -11,7 +11,7 @@ declare const arnClient: ArnClient
 })
 export class AppNftListExampleComponent {
 
-  foundNFTs: NmpGetCertificatesResponse[] = []
+  foundNFTs: NmpCertificatesResponse[] = []
 
   @Input()
   tag = ""
@@ -22,7 +22,7 @@ export class AppNftListExampleComponent {
       authContext?.status$.subscribe(async (status) => {
         ngZone.run(async () => {
           if (status?.connectionStatus === ArnConnectionStatus.authenticated) {
-            this.foundNFTs = await arnClient.nft.arianee.getList({tags: [this.tag]})
+            this.foundNFTs = await arnClient.nft.arianee.getList({filter: {tags: [this.tag]}})
           } else {
             this.foundNFTs = []
           }
