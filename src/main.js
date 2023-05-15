@@ -5,7 +5,7 @@ import {IfConnectedExample} from "./IfConnectedExample.js"
 import {NftListExample} from "./NftListExample.js"
 
 const clientFactory = new ArnHttpClientFactory()
-clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testproject")
+clientFactory.createFromUrl("http://localhost:3000/testproject")
   .then(() => {
     const connectExample = new ConnectExample("Connect your wallet", "Disconnect your wallet")
     connectExample.render(document.querySelector("#arn-connect"))

@@ -18,7 +18,10 @@ export class NftListExample {
     const input = this.input = document.createElement("input")
     input.value = this.tags.join(",")
     input.type = "search"
-    input.onchange = this.search
+    input.onchange = () => {
+      this.tags = input.value.split(",")
+      this.search()
+    }
     anchor.querySelector("label").append(input)
     const self = this
     // Listen to connection status changes
