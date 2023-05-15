@@ -34,7 +34,7 @@ export class NftListExample {
   }
 
   updateStatus(status) {
-    let enabled = status?.connectionStatus === "authenticated"
+    const enabled = status?.connectionStatus === "authenticated"
     this.input.disabled = !enabled
     if (enabled) {
       this.search()
