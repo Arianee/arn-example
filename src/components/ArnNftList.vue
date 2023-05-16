@@ -7,7 +7,7 @@ const props = defineProps({
 })
 let foundNFTs;
 const findNFTs = async() => {
-  foundNFTs = await arn.nft.arianee.getList({tags: [props.tag]})
+  foundNFTs = await arn.nft.arianee.getList({filter: {tags: [props.tag]}})
 }
 arn.auth.currentContext$.subscribe(async (authContext) => {
   authContext?.status$.subscribe((status) => {
