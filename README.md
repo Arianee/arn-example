@@ -1,5 +1,7 @@
 # arn-example
 
+<img src="https://storage.googleapis.com/arn3-static-resources/arn/arn.png" alt="ARN logo" width="100" align="right"/>
+
 Sample application using [ARN](https://arianee.notion.site/ARN-User-Guide-c2aeabd71df94190aa1b7988bbdfb4c1).
 
 While integrating ARN into a web app can be summarized as:
