@@ -16,8 +16,6 @@ While integrating ARN into a web app can be summarized as:
     const myProjectUrl = 'https://my-arn-server/myProject'
     const clientFactory = new ArnHttpClientFactory()
     const arnClient = await clientFactory.createFromUrl(myProjectUrl);
-   
-    window.arnClient = arnClient  // or whatever scope you want to make it available from 
     ```
 
 it can be still worth having bootstrap/example projects to demystify it.
