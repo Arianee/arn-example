@@ -5,6 +5,7 @@ import {AppComponent} from "./app.component"
 import {AppConnectExampleComponent} from "./app-connect-example/app-connect-example.component"
 import {AppIfConnectedExampleComponent} from "./app-if-connected-example/app-if-connected-example.component"
 import {AppNftListExampleComponent} from "./app-nft-list/app-nft-list-example.component"
+import {FormsModule} from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {AppNftListExampleComponent} from "./app-nft-list/app-nft-list-example.co
     AppNftListExampleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
