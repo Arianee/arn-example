@@ -1,6 +1,5 @@
-# ArnExample
-
-Sample application using ARN.
+# arn-example
+A sample application using <img style="vertical-align: middle" src="https://storage.googleapis.com/arn3-static-resources/arn/arn.png" alt="ARN logo" height="25"/>
 
 This is the Angular version.
 Check [other branches](https://github.com/Arianee/arn-example/tree/main) to find the one that matches your case.
