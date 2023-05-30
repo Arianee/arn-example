@@ -1,15 +1,19 @@
 import {ArnClient} from "@arianee/arn-client"
 declare const arnClient: ArnClient;
 
+interface MyTranslation {
+  welcome: string
+}
+
 export class TranslationExample {
-  protected translations?: Promise<any>
+  protected translations?: MyTranslation
 
   constructor(protected anchor: Element) {
   }
 
   async getTranslations(): Promise<any> {
     if (!this.translations) {
-      this.translations = await arnClient.i18n.get(navigator.language)
+      this.translations = await arnClient.i18n.get<MyTranslation>()
     }
     return this.translations!;
   }

@@ -1,6 +1,6 @@
 {
-  "name": "arn-example",
-  "version": "0.0.0",
+  "name": "arn-example-ts",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -8,9 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arianee/arn-client": "^1.3.0",
-    "@arianee/arn-components": "^1.2.0",
-    "@arianee/arn-types": "^1.4.0"
+    "@arianee/arn-client": "^2.0.0",
+    "@arianee/arn-types": "^2.0.0",
+    "@arianee/arn-components": "^2.0.0-develop.1"
   },
   "devDependencies": {
     "typescript": "^4.9.3",
