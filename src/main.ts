@@ -1,5 +1,4 @@
-window.global ||= window;
-
+import "./init.js"
 import {ArnHttpClientFactory} from "@arianee/arn-client"
 import "@arianee/arn-components"
 import {ConnectExample} from "./ConnectExample"
