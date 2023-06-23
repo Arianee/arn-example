@@ -12,7 +12,7 @@ export class NftListExample {
     anchor.innerHTML = `
 <section>
   <h2>NFT list by tag</h2>
-  <p>This is a sample usage of the <code>arnClient.nft.arianee.getList()</code> API.</p>
+  <p>This is a sample usage of the <a href="https://www.notion.so/arianee/ARN-Client-NFT-API-475b6d3044424aa7be8b9ffc3aec9631?pvs=4#eb7163df90724e4684b3874389c6e579"><code>arnClient.nft.arianee.getList()</code> API</a>.</p>
   <label>Search for: </label>
   <arn-if-connected>
     <p slot="if-true"></p>
