@@ -1,24 +1,16 @@
-import {ArnClient} from "@arianee/arn-client"
+import {ArnAuthStatus, ArnClient} from "@arianee/arn-client"
 
 declare const arnClient: ArnClient
 
-export class IfConnectedExample {
-  protected walletAddress?: string
+export class ConnectedStatusExample {
+  protected status?: ArnAuthStatus
   protected latestAnchor?: Element
 
   constructor(protected msgConnected: string, protected msgDisconnected: string) {
-    this.walletAddress = ""
     // Listen to status to refresh wallet address
     arnClient.auth.currentContext$.subscribe(async (authContext) => {
       authContext?.status$.subscribe((status) => {
-        switch (status?.connectionStatus) {
-          case "authenticated":
-            this.walletAddress = status.address
-            break
-          case "disconnected":
-            this.walletAddress = ""
-            break
-        }
+        this.status = status
         if (this.latestAnchor) {
           this.render(this.latestAnchor)
         }
@@ -27,14 +19,16 @@ export class IfConnectedExample {
   }
 
   render(anchor: Element) {
+    const status = this.status
     anchor.innerHTML = `
 <section>
   <h2>Connection gating</h2>
-  <p>This is a sample usage of the <code>&lt;arn-if-connected&gt;</code> ARN component:</p>
+  <p>This is a sample usage of the <a href="https://www.notion.so/arianee/arn-if-connected-ad16b36c8eb04691be5fba4df5ac5e79"><code>&lt;arn-if-connected&gt;</code> ARN component</a>:</p>
   <arn-if-connected>
     <p slot="if-false">${this.msgDisconnected}</p>
-    <p slot="if-true">${this.msgConnected} ${this.walletAddress}</p>
+    <p slot="if-true">${this.msgConnected} ${status?.address}</p>
   </arn-if-connected>
+  <p>You can also listen for the authentication context programmatically: <code><pre>${JSON.stringify(status, null, 2)}</pre></code></p>
 </section>`
     this.latestAnchor = anchor
   }

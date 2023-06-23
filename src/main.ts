@@ -2,7 +2,7 @@ import "./init.js"
 import {ArnHttpClientFactory} from "@arianee/arn-client"
 import "@arianee/arn-components"
 import {ConnectExample} from "./ConnectExample"
-import {IfConnectedExample} from "./IfConnectedExample"
+import {ConnectedStatusExample} from "./ConnectedStatusExample"
 import {NftListExample} from "./NftListExample"
 import {TranslationExample} from "./TranslationExample"
 
@@ -14,7 +14,7 @@ clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testprojec
     connectExample.render(connectAnchor)
   }
 
-  const ifConnectedExample = new IfConnectedExample("You are connected with wallet", "You are disconnected.")
+  const ifConnectedExample = new ConnectedStatusExample("You are connected with wallet", "You are disconnected.")
   const ifConnectedAnchor = document.querySelector("#arn-if-connected-example")
   if (ifConnectedAnchor) {
     ifConnectedExample.render(ifConnectedAnchor)
