@@ -13,7 +13,11 @@ export class TranslationExample {
 
   async getTranslations(): Promise<any> {
     if (!this.translations) {
-      this.translations = await arnClient.i18n.get<MyTranslation>()
+      try {
+        this.translations = await arnClient.i18n.get<MyTranslation>()
+      } catch (e) {
+        console.warn('No translations available for this project')
+      }
     }
     return this.translations!;
   }
@@ -22,9 +26,10 @@ export class TranslationExample {
     const translations = await this.getTranslations();
     this.anchor.innerHTML = `
 <section>
-  <h2>Internationalization</h2>
-  <p>This is a very simple example of using the <a href="https://www.notion.so/arianee/ARN-Client-Internationalization-API-9a11090251654f81b06c3345d2e55161">ARN i18n API</a>.</p>
-  <p>Here is a message translated in your language: <i>${translations.welcome}</i></p>
+  <h2>Internationalization</h2>` + (translations ?
+  `<p>This is a very simple example of using the <a href="https://www.notion.so/arianee/ARN-Client-Internationalization-API-9a11090251654f81b06c3345d2e55161">ARN i18n API</a>.</p>
+  <p>Here is a message translated in your language: <i>${translations.welcome}</i></p>`
+      : '<p>No translations available on this project.</p>') + `
 </section>`
   }
 }

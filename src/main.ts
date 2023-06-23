@@ -7,7 +7,7 @@ import {NftListExample} from "./NftListExample"
 import {TranslationExample} from "./TranslationExample"
 
 const clientFactory = new ArnHttpClientFactory()
-clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testproject").then(() => {
+clientFactory.createFromUrl("https://arn-server-moncler-staging.arianee.com/arn-staging").then(() => {
   const connectExample = new ConnectExample("Connect your wallet", "Disconnect your wallet")
   const connectAnchor = document.querySelector("#arn-connect-example")
   if (connectAnchor) {
