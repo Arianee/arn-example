@@ -10,15 +10,15 @@ export class NftListExample {
 
   constructor(protected anchor: Element, protected tags: string[]) {
     anchor.innerHTML = `
-<section>
-  <h2>NFT list by tag</h2>
+<details>
+  <summary>NFT list by tag</summary>
   <p>This is a sample usage of the <a href="https://www.notion.so/arianee/ARN-Client-NFT-API-475b6d3044424aa7be8b9ffc3aec9631?pvs=4#eb7163df90724e4684b3874389c6e579"><code>arnClient.nft.arianee.getList()</code> API</a>.</p>
   <label>Search for: </label>
   <arn-if-connected>
     <p slot="if-true"></p>
     <p slot="if-false">(Connect first to see results)</p>
   </arn-if-connected>
-</section>`
+</details>`
     const input = this.input = document.createElement("input")
     input.value = this.tags.join(",")
     input.type = "search"

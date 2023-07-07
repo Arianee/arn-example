@@ -5,3 +5,7 @@ body {
 h1 img {
   vertical-align: middle;
 }
+summary {
+  margin: 0.5em 0;
+  font-size: 1.5em;
+}
