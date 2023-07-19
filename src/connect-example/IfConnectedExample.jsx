@@ -24,7 +24,7 @@ function IfConnectedExample(props) {
       <p>This is a sample usage of the <code>&lt;arn-if-connected&gt;</code> ARN component:</p>
       <arn-if-connected>
         <p slot="if-false">{props.disconnectedMsg}</p>
-        <p slot="if-true">{props.connectedMsg} {walletAddress}</p>
+        <p slot="if-true">{props.connectedMsg} <code>{walletAddress}</code></p>
       </arn-if-connected>
     </section>
   )
