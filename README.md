@@ -25,6 +25,7 @@ Check the branch that suits your needs:
 - [**Angular**](https://github.com/Arianee/arn-example/tree/angular)
 - **React**
     - [Built using Vite](https://github.com/Arianee/arn-example/tree/react_vite)
+    - [Built with CRA](https://github.com/Arianee/arn-example/tree/react_cra)
     - **Preact**
         - [Built using Vite](https://github.com/Arianee/arn-example/tree/preact_vite)
 - **Svelte**
