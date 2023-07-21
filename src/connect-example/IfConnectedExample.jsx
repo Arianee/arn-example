@@ -1,7 +1,5 @@
 import {useContext, useEffect, useState} from "react"
-import {ArnConnectionStatus} from "@arianee/arn-client"
 import {ArnContext} from "../index"
-
 
 function ConnectExample(props) {
   const arnClient = useContext(ArnContext)
@@ -9,14 +7,7 @@ function ConnectExample(props) {
   useEffect(() => {
     arnClient.auth.currentContext$.subscribe(async (authContext) => {
       authContext?.status$.subscribe((status) => {
-        switch (status?.connectionStatus) {
-          case ArnConnectionStatus.authenticated:
-            setWalletAddress(status.address)
-            break
-          case ArnConnectionStatus.disconnected:
-            setWalletAddress("")
-            break
-        }
+        setWalletAddress(status?.address || "")
       })
     })
   })
@@ -26,7 +17,7 @@ function ConnectExample(props) {
       <p>This is a sample usage of the <code>&lt;arn-if-connected&gt;</code> ARN component:</p>
       <arn-if-connected>
         <p slot="if-false">{props.disconnectedMsg}</p>
-        <p slot="if-true">{props.connectedMsg} {walletAddress}</p>
+        <p slot="if-true">{props.connectedMsg} <code>{walletAddress}</code></p>
       </arn-if-connected>
     </section>
   )
