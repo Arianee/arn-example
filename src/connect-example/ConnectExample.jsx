@@ -1,4 +1,3 @@
-
 function ConnectExample(props) {
   return (
     <section>

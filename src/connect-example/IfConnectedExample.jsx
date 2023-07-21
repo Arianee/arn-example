@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react"
+import {useContext, useEffect, useState} from "react"
 import {ArnConnectionStatus} from "@arianee/arn-client"
+import {ArnContext} from "../index"
 
-const arnClient = process.env.REACT_APP_ARNCLIENT
 
 function ConnectExample(props) {
+  const arnClient = useContext(ArnContext)
   const [walletAddress, setWalletAddress] = useState("")
   useEffect(() => {
     arnClient.auth.currentContext$.subscribe(async (authContext) => {
