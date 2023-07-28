@@ -6,7 +6,12 @@ import { NftListExample } from './NftListExample';
 import { TranslationExample } from './TranslationExample';
 import { ConnectProgExample } from './ConnectProgExample';
 import { ConnectTagExample } from './ConnectTagExample';
-import { ArnConnectorType, ArnValidAuthConfig, Web3ModalV2DesktopBehaviorMode } from '@arianee/arn-types';
+import {
+  ArnConnectorType,
+  ArnValidAuthConfig,
+  IArnAuthContext,
+  Web3ModalV2DesktopBehaviorMode
+} from '@arianee/arn-types';
 import { polygon } from '@wagmi/chains';
 
 const walletConnectProjectId = '161a26cf3fa8e9340f7d0c153dcd2b64';
@@ -17,9 +22,10 @@ const web3ModalV2Config: ArnValidAuthConfig = {
   connectorType: ArnConnectorType.Web3ModalV2,
   sigMessage: `By signing this message, you give use access to the list of NFTs in your Wallet. We can't have the right to modify your Wallet`,
   // trySwitchChainNumber: ChainId.PolygonMainnet, // Request to switch to Polygon few seconds after connection
+  signCallback: async (_context: IArnAuthContext) => window.confirm('Ok to sign ?'),
   options: {
     projectId: walletConnectProjectId,
-    wcVersion: 1,
+    wcVersion: 2,
     desktopBehavior: {
       mode: Web3ModalV2DesktopBehaviorMode.ArianeeOrWalletConnect,
       universalLink: 'com.arianee.Wallet://',
