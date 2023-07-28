@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arianee/arn-client": "2.0.0-develop.14",
+    "@arianee/arn-client": "2.0.0-develop.15",
     "@arianee/arn-components": "2.0.0-develop.4",
     "@arianee/arn-types": "2.0.0-develop.10",
     "@wagmi/chains": "^1.5.0",
