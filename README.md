@@ -37,4 +37,4 @@ Check the branch that suits your needs:
         - [Built using Vite](https://github.com/Arianee/arn-example/tree/ts_vite)
 - **VueJS**
     - [Vue2 built using Vite](https://github.com/Arianee/arn-example/tree/vue2_vite)
-    - [Vue3 built using Vite](https://github.com/Arianee/arn-example/tree/vue3_vite)
+    - [Vue built using Vite](https://github.com/Arianee/arn-example/tree/vue_vite)
