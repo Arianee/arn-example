@@ -12,10 +12,10 @@
     "@arianee/arn-components": "2.0.0-develop.4",
     "@arianee/arn-types": "2.0.0-develop.10",
     "@wagmi/core": "1.0.6",
-    "vue": "^3.2.45"
+    "vue": "2.7.14"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue2": "^2.2.0",
     "vite": "^4.1.0",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3"
   }

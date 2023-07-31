@@ -1,14 +1,14 @@
 <script setup>
-import { ref, inject } from "vue";
+import { ref } from "vue";
 import {ArnConnectionStatus} from "@arianee/arn-client"
-const arn = inject('arn')
+const arnClient = window.arnClient
 defineProps({
   connectedMsg: String,
   disconnectedMsg: String
 })
 let walletAddress = ref("")
 // Listen to auth status to refresh wallet address
-arn.auth.currentContext$.subscribe(async (authContext) => {
+arnClient.auth.currentContext$.subscribe(async (authContext) => {
   authContext?.status$.subscribe((status) => {
     switch (status?.connectionStatus) {
       case ArnConnectionStatus.authenticated:
@@ -28,7 +28,7 @@ arn.auth.currentContext$.subscribe(async (authContext) => {
     <p>This is a sample usage of the <code>&lt;arn-if-connected&gt;</code> ARN component:</p>
     <arn-if-connected>
       <p slot="if-false">{{ disconnectedMsg }}</p>
-      <p slot="if-true">{{ connectedMsg }} {{ walletAddress }}</p>
+      <p slot="if-true">{{ connectedMsg }} <code>{{ walletAddress }}</code></p>
     </arn-if-connected>
   </section>
 </template>

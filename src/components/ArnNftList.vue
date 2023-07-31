@@ -1,26 +1,27 @@
 <script setup>
 import {ArnConnectionStatus} from "@arianee/arn-client"
-import { inject } from 'vue'
-const arn = inject('arn')
+
+const arnClient = window.arnClient
 const props = defineProps({
   tag: String
 })
-let foundNFTs;
+let foundNFTs
 const findNFTs = async() => {
-  foundNFTs = await arn.nft.arianee.getList({filter: {tags: [props.tag]}})
+  foundNFTs = await arnClient.nft.arianee.getList({filter: {tags: [props.tag]}})
 }
-arn.auth.currentContext$.subscribe(async (authContext) => {
+arnClient.auth.currentContext$.subscribe(async (authContext) => {
   authContext?.status$.subscribe((status) => {
     if (status?.connectionStatus === ArnConnectionStatus.authenticated) {
       findNFTs()
     }
-  });
-});
+  })
+})
 </script>
 
 <template>
+  <section>
   <h2>NFT list by tag</h2>
-  <p>This is a sample usage of the <code>arn.nft.arianee.getList(tag)</code> API:</p>
+    <p>This is a sample usage of the <code>arnClient.nft.arianee.getList(tag)</code> API:</p>
   <arn-if-connected>
     <div slot="if-true">
       <ul v-if="foundNFTs && foundNFTs.length > 0">
@@ -34,5 +35,6 @@ arn.auth.currentContext$.subscribe(async (authContext) => {
       (you can list NFTs only when connected)
     </div>
   </arn-if-connected>
+  </section>
 </template>
 
