@@ -8,9 +8,9 @@
     "eject": "react-app-rewired eject"
   },
   "dependencies": {
-    "@arianee/arn-client": "2.0.0",
-    "@arianee/arn-components": "2.0.0-staging.1",
-    "@arianee/arn-types": "2.1.0",
+    "@arianee/arn-client": "2.0.0-develop.16",
+    "@arianee/arn-components": "2.0.0-develop.4",
+    "@arianee/arn-types": "2.0.0-develop.10",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,7 +18,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "@wagmi/connectors": "^0.3.8"
+    "@wagmi/core": "1.0.6"
   },
   "eslintConfig": {
     "extends": [

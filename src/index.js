@@ -10,7 +10,9 @@ import "@arianee/arn-components" // Register ARN web components
 export const ArnContext = createContext(undefined)
 
 const clientFactory = new ArnHttpClientFactory()
-clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testproject").then((arnClient) => {
+clientFactory.createConfigFromUrl("https://arn-server-test-prod.arianee.com/testproject").then(async (arnConfig) => {
+  arnConfig.auth.signCallback = () => window.confirm("Ok to sign?")
+  const arnClient = await clientFactory.create(arnConfig)
   ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode> <ArnContext.Provider value={arnClient}> <App/> </ArnContext.Provider> </React.StrictMode>
   )
