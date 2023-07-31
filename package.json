@@ -12,10 +12,29 @@
     "@arianee/arn-components": "2.0.0-develop.4",
     "@arianee/arn-types": "2.0.0-develop.10",
     "@wagmi/core": "1.0.6",
-    "vue": "^3.2.45"
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "core-js": "^3.30.2",
+    "vue": "2.7.14",
+    "nuxt": "2.15.8",
+    "nuxt-webfontloader": "^1.1.0",
+    "vue-horizontal": "^0.8.12"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@vue/cli-service": "^4.5.15",
+    "@vue/eslint-config-airbnb": "^6.0.0",
+    "autoprefixer": "^10.4.2",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "eslint-plugin-vuejs-accessibility": "^1.1.1",
+    "@vitejs/plugin-vue2": "^2.2.0",
     "vite": "^4.1.0",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3"
   }
