@@ -10,9 +10,10 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@arianee/arn-client": "2.0.0",
-    "@arianee/arn-components": "2.0.0-staging.1",
-    "@arianee/arn-types": "2.1.0",
+    "@arianee/arn-client": "2.0.0-develop.16",
+    "@arianee/arn-components": "2.0.0-develop.4",
+    "@arianee/arn-types": "2.0.0-develop.10",
+    "@wagmi/core": "1.0.6",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3"
   },
   "devDependencies": {
