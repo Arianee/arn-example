@@ -36,4 +36,5 @@ Check the branch that suits your needs:
     - TypeScript
         - [Built using Vite](https://github.com/Arianee/arn-example/tree/ts_vite)
 - **VueJS**
-    - [Built using Vite](https://github.com/Arianee/arn-example/tree/vue_vite)
+    - [Vue2 built using Vite](https://github.com/Arianee/arn-example/tree/vue2_vite)
+    - [Vue3 built using Vite](https://github.com/Arianee/arn-example/tree/vue3_vite)
