@@ -26,8 +26,45 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "crypto": [
+        "./node_modules/crypto-browserify"
+      ],
+      "stream": [
+        "./node_modules/stream-browserify"
+      ],
+      "assert": [
+        "./node_modules/assert"
+      ],
+      "http": [
+        "./node_modules/stream-http"
+      ],
+      "https": [
+        "./node_modules/https-browserify"
+      ],
+      "os": [
+        "./node_modules/os-browserify"
+      ],
+      "process": [
+        "./node_modules/process"
+      ],
+      "zlib": [
+        "./node_modules/browserify-zlib"
+      ],
+      "@arianee/ng-ui": [
+        "./libs/ui/src/index.ts",
+      ],
+      "@arianee/ng-wallet-ui": [
+        "./libs/wallet-ui/src/index.ts"
+      ]
+    }
   },
+  "include": [
+    "src/**/*.ts",
+    "tls.d.ts",
+    "net.d.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

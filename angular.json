@@ -11,17 +11,43 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "customWebpackConfig": {
-              "path": "./extra-webpack.config.js",
-              "replaceDuplicatePlugins": true
-            },
+            "allowedCommonJsDependencies": [
+              "buffer",
+              "bn.js",
+              "aes-js",
+              "scrypt-js",
+              "web3modal",
+              "process",
+              "@walletconnect/web3-provider",
+              "lens-protocol",
+              "web3",
+              "js-sha3",
+              "bech32",
+              "hash.js",
+              "@walletconnect/window-getters",
+              "@walletconnect/window-metadata",
+              "@walletconnect/socket-transport",
+              "is-typedarray",
+              "typedarray-to-buffer",
+              "@walletconnect/environment",
+              "@walletconnect/window-getters",
+              "@stablelib/ed25519",
+              "query-string",
+              "qrcode",
+              "ethers/lib/utils.js",
+              "cross-fetch",
+              "@arianee/wallet",
+              "@arianee/core",
+              "@metamask/jazzicon"
+            ],
             "outputPath": "dist/arn-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "src/polyfills.ts"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -61,7 +87,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "arn-example:build:production"
@@ -83,7 +109,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "src/polyfills.ts"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
