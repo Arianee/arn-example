@@ -3,22 +3,20 @@ import {HasERC721Condition} from "@arianee/arn-types"
 export class Erc721OwnershipExample {
 
   constructor(anchor) {
-    this.anchor = anchor;
-    this.contractAddress = ''
-    this.message = ''
+    this.anchor = anchor
+    this.contractAddress = ""
+    this.message = ""
     // Listen to auth status to refresh wallet address
     arnClient.auth.currentContext$.subscribe(async (authContext) => {
       authContext?.status$.subscribe((status) => {
         switch (status?.connectionStatus) {
-          case 'authenticated':
+          case "authenticated":
             this.checkOwnership()
             break
-          case 'disconnected':
+          case "disconnected":
             break
         }
-        if (this.latestAnchor) {
-          this.render(this.latestAnchor)
-        }
+        this.render()
       })
     })
   }
@@ -39,10 +37,10 @@ export class Erc721OwnershipExample {
           this.message = `The user doesn't own enough NFT of the required collection`
         }
       } catch (e) {
-        this.message = 'Error: ' + e.message
+        this.message = "Error: " + e.message
       }
     } else {
-      this.message = 'Collection address expected'
+      this.message = "Collection address expected"
     }
     this.render()
   }
@@ -63,7 +61,5 @@ export class Erc721OwnershipExample {
       this.checkOwnership()
     }
     this.anchor.querySelector("label").append(input)
-
-    this.latestAnchor = this.anchor
   }
 }
