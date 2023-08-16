@@ -5,3 +5,8 @@ body {
 h1 img {
   vertical-align: middle;
 }
+.footer {
+  text-align: right;
+  font-size: 0.8em;
+  color: darkgray;
+}

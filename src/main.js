@@ -21,4 +21,6 @@ clientFactory.createConfigFromUrl("https://arn-server-test-prod.arianee.com/test
 
     const erc721 = new Erc721OwnershipExample(document.querySelector("#arn-erc721"))
     erc721.render()
+
+    document.querySelector("#arn-version").textContent = `ARN v${arnClient.version}`
   })
