@@ -7,7 +7,7 @@ import {Erc721OwnershipExample} from "./Erc721OwnershipExample.js"
 import {ManualRequestExample} from "./ManualRequestExample.js"
 
 const clientFactory = new ArnHttpClientFactory()
-const projectUrl = "http://localhost:3000/lacoste"
+const projectUrl = "https://arn-server-test-prod.arianee.com/testproject"
 clientFactory.createConfigFromUrl(projectUrl)
   .then(async (arnConfig) => {
     arnConfig.auth.beforeSign = () => window.confirm("Ok to sign?")     // Optional callback before sign
