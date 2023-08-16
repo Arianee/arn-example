@@ -43,8 +43,7 @@ export class ManualRequestExample {
       "Content-Type": "application/json; charset=utf-8"
     }
     let headersStr = ""
-    for (const header in headers
-      ) {
+    for (const header in headers) {
       headersStr += header + ": " + headers[header] + "\n"
     }
 
