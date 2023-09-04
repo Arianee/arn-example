@@ -8,7 +8,7 @@ import {ConnectProgExample} from "./ConnectProgExample"
 import {ConnectTagExample} from "./ConnectTagExample"
 
 const clientFactory = new ArnHttpClientFactory()
-clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testproject").then(() => {
+clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testproject").then((arnClient) => {
 
   const connectTagExample = new ConnectTagExample("Connect your wallet", "Disconnect your wallet")
   const connectTagAnchor = document.querySelector("#arn-connect-tag")
@@ -39,4 +39,7 @@ clientFactory.createFromUrl("https://arn-server-test-prod.arianee.com/testprojec
   if (i18nAnchor) {
     translationExample.render()
   }
+
+  let versionEl = document.querySelector("#arn-version")!;
+  versionEl.textContent = `ARN v${arnClient.version}`
 })

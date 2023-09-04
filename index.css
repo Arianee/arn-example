@@ -9,3 +9,8 @@ summary {
   margin: 0.5em 0;
   font-size: 1.5em;
 }
+.footer {
+  text-align: right;
+  font-size: 0.8em;
+  color: darkgray;
+}
