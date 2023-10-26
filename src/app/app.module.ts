@@ -6,6 +6,7 @@ import {AppConnectExampleComponent} from "./app-connect-example/app-connect-exam
 import {AppIfConnectedExampleComponent} from "./app-if-connected-example/app-if-connected-example.component"
 import {AppNftListExampleComponent} from "./app-nft-list-example/app-nft-list-example.component"
 import {FormsModule} from "@angular/forms"
+import { SignPopupComponent } from './app-connect-example/sign-popup/sign-popup.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from "@angular/forms"
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SignPopupComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

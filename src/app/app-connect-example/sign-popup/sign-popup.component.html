@@ -1,0 +1,7 @@
+<fieldset>
+  <legend>Sign popup</legend>
+  <p>Ok to sign?</p>
+  <button (click)="agree(true)" [disabled]="retryCount > 0 || canRetry">Click to sign</button>
+  <button (click)="onRetryClick()" [disabled]="!canRetry">{{retryButtonLabel}}</button>
+  <button class="close" (click)="agree(false)">X</button>
+</fieldset>
