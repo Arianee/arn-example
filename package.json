@@ -26,8 +26,8 @@
     "@wagmi/core": "1.0.6"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.2.1",
-    "@angular/cli": "~16.2.1",
+    "@angular-devkit/build-angular": "^16.2.8",
+    "@angular/cli": "~16.2.8",
     "@angular/compiler-cli": "^16.2.4",
     "@angular-builders/custom-webpack": "^16.0.0",
     "@types/jasmine": "~4.3.0",
